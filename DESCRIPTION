@@ -1,0 +1,29 @@
+Package: makedatar
+Title: Load and Prepare Clinical Trial Data from Column-Info Excel Workbooks
+Version: 0.1.0
+Authors@R:
+    person("Shimpei", "Morimoto", email = "your@email.com",
+           role = c("aut", "cre"))
+Description: Provides a pipeline for importing, transforming, and cleaning
+    clinical trial datasets driven by a col_info schema table stored in an
+    Excel workbook. The col_info table declares variable roles (ID, exposure,
+    background, outcome, time-to-event), transformation rules, cutoff-based
+    discretisation, factor labels, and stratum-inclusion filters. The package
+    converts the original script-based makedata_01.R workflow into composable,
+    testable functions with no global-state side effects.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends:
+    R (>= 4.1.0)
+Imports:
+    readxl (>= 1.4.0),
+    lubridate (>= 1.9.0)
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+URL: https://github.com/Shimpeim/makedatar
+BugReports: https://github.com/Shimpeim/makedatar/issues
